@@ -3,30 +3,33 @@
   <head>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet">
 
     <meta charset="utf-8">
     <title>Foto Finder</title>
   </head>
   <body>
     <header>
-      <h1>Foto <img src="assets/foto-finder-logo.svg" alt="foto finder logo" class="icon"> Finder</h1>
+      <h1 class="document-title">FOTO<img src="assets/foto-finder-logo.svg" alt="foto finder logo" class="logo">FINDER</h1>
 
-      <label for="foto-title">Title</label>
-      <input type="text" class="text-field" id="foto-title" name="foto-title">
+      <div class="text-inputs">
+        <label for="foto-title" class="text-label">Title</label>
+        <input type="text" class="text-field" id="foto-title" name="foto-title">
 
-      <label for="foto-title">Caption</label>
-      <input type="text" class="text-field" id="foto-caption" name="foto-caption">
+        <label for="foto-title" class="text-label">Caption</label>
+        <input type="text" class="text-field" id="foto-caption" name="foto-caption">
 
-      <label for="file">Choose File</label>
-      <input type="file" name="file" id="file" class="header-button">
-      <button type="button" name="save" id="Save" class="header-button">Save</button>
+        <label for="file" class="header-button">Choose File</label>
+        <input type="file" name="file" id="file">
+        <button type="button" name="save" id="save" class="header-button">Save</button>
+      </div>
 
     </header>
 
     <main>
       <section class="card">
         <h3 class="card-title">Placeholder text</h3>
-        <img src="TBD" alt="">
+        <img src="photos/waterfall-2.jpg" alt="" class="card-photo">
         <h4 class="card-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
         <div class="trash-like">
           <img src="assets/delete.svg" alt="delete icon" class="icon">
@@ -36,7 +39,7 @@
 
       <section class="card">
         <h3 class="card-title">Placeholder text</h3>
-        <img src="TBD" alt="">
+        <img src="photos/waterfall-1.jpg" alt="" class="card-photo">
         <h4 class="card-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
         <div class="trash-like">
           <img src="assets/delete.svg" alt="delete icon" class="icon">
@@ -46,7 +49,37 @@
 
       <section class="card">
         <h3 class="card-title">Placeholder text</h3>
-        <img src="TBD" alt="">
+        <img src="photos/waterfall-1.jpg" alt="" class="card-photo">
+        <h4 class="card-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+        <div class="trash-like">
+          <img src="assets/delete.svg" alt="delete icon" class="icon">
+          <img src="assets/favorite.svg" alt="favorite icon" class="icon">
+        </div>
+      </section>
+
+      <section class="card">
+        <h3 class="card-title">Placeholder text</h3>
+        <img src="photos/waterfall-1.jpg" alt="" class="card-photo">
+        <h4 class="card-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+        <div class="trash-like">
+          <img src="assets/delete.svg" alt="delete icon" class="icon">
+          <img src="assets/favorite.svg" alt="favorite icon" class="icon">
+        </div>
+      </section>
+
+      <section class="card">
+        <h3 class="card-title">Placeholder text</h3>
+        <img src="photos/waterfall-1.jpg" alt="" class="card-photo">
+        <h4 class="card-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+        <div class="trash-like">
+          <img src="assets/delete.svg" alt="delete icon" class="icon delete">
+          <img src="assets/favorite.svg" alt="favorite icon" class="icon favorite">
+        </div>
+      </section>
+
+      <section class="card">
+        <h3 class="card-title">Placeholder text</h3>
+        <img src="photos/waterfall-1.jpg" alt="" class="card-photo">
         <h4 class="card-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
         <div class="trash-like">
           <img src="assets/delete.svg" alt="delete icon" class="icon">

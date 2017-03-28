@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  background: #3e2a35;
+  color: #ffffff;
+}
+
+.document-title {
+  font-size: 55px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.logo {
+  padding-top: 30px;
+  height: 80px;
+  width: 80px;
+  margin-right: 5px;
+}
+
+.text-inputs {
+  margin: 20px auto 0px;
+  width: 480px;
+  position: relative;
+}
+
+.text-label,
+.text-field {
+  display: block;
+  padding: 10px 0px;
+}
+
+.text-label {
+  font-size: 12px;
+  color: #C2B2B4
+}
+
+.text-field {
+  padding: 10px;
+  width: 100%;
+}
+
+.header-button {
+  background: #5B4447;
+  display: inline-block;
+  width: 45%;
+  border: none;
+  font-style: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  text-align: center;
+  margin: 40px 0px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+
+
+#file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#save {
+  position: absolute;
+  right: 0px;
+}
+
+
+main {
+  background: #C2B2B4;
+  padding: 25px;
+  text-align: center;
+}
+
+
+
+.card {
+  text-align: left;
+  display: inline-block;
+  position: relative;
+  height: 300px;
+  width: 200px;
+  margin: 30px;
+  background: blue;
+}
+
+.card-photo {
+  height: 40%;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.trash-like {
+  display: block;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: red;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  bottom: 0px;
+  display: inline-block;
+}
+
+.favorite {
+  right: 0px;
+}
+.delete {
+  left: 0px;
+}
+
+/*Psuedo Classes*/
+.header-button:hover {
+  background: #938284
+}
