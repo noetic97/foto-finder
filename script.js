@@ -34,3 +34,5 @@ function addCard(cardNew) {
   cardStructure.className = "card"
 cardContainer.appendChild(cardStructure, card)
 };
+
+//This is a test - please ignore
