@@ -84,6 +84,7 @@ main {
   background: #C2B2B4;
   padding: 25px;
   text-align: center;
+  vertical-align: top
 }
 
 
@@ -91,34 +92,36 @@ main {
 .card {
   text-align: left;
   display: inline-block;
+  vertical-align: top;
   position: relative;
-  height: 300px;
+  height: 250px;
   width: 200px;
   margin: 30px;
   background: blue;
 }
 
 .card-photo {
-  height: 40%;
+  height: 50%;
   width: 100%;
-  margin: auto;
+  margin: 10px auto;
   display: block;
 }
 
+.card-caption {
+  height: 100px;
+  overflow-y: auto;
+}
+
 .trash-like {
-  display: block;
-  position: relative;
+  position: absolute;
   bottom: 0px;
-  width: 100%;
   background: red;
+  width: 200px;
 }
 
 .icon {
   height: 30px;
   width: 30px;
-  position: absolute;
-  bottom: 0px;
-  display: inline-block;
 }
 
 .favorite {
