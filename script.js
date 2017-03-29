@@ -83,7 +83,7 @@ function buttonToggle () {
 var photoFile = fileInput.files[0]
   if (titleInput.value === '' || captionInput.value === '') {
     saveButton.disabled = true;
-  } else if (photoFile == undefined || photoFile.type !== 'image/jpeg' && photoFile.type !== 'image/gif') {
+  } else if (photoFile == undefined || photoFile.type !== 'image/jpeg' && photoFile.type !== 'image/gif' && photoFile.type !== 'image/png') {
     saveButton.disabled = true;
   } else {
     saveButton.disabled = false;
