@@ -3,6 +3,7 @@ var captionInput = document.getElementById('foto-caption');
 var fileInput = document.getElementById('file');
 var saveButton = document.getElementById('save');
 var cardContainer = document.querySelector('main');
+var favoriteArr = []
 
 // Event Listeners
 addListeners()
@@ -11,7 +12,47 @@ titleInput.addEventListener('input', buttonToggle)
 captionInput.addEventListener('input', buttonToggle)
 fileInput.addEventListener('change', buttonToggle)
 
+
 // Global Functions
+function orderFavorites () {
+  var favoriteButtons = document.querySelectorAll('.favorite')
+  var favoriteArr = []
+
+  // Get a list of the cards
+  for (var i = 0; i < favoriteButtons.length; i++) {
+    favoriteArr.push(favoriteButtons[i].closest('.card'))
+  }
+
+  // Unshift current element to the top of the list
+  console.log(favoriteArr)
+}
+
+function defaultText() {
+  if (document.getElementsByClassName('card').length > 1) {
+    console.log('card exists')
+    removeDefault()
+  } else {
+    createDefault()
+  }
+}
+
+function createDefault() {
+  var defaultText = document.createElement('h3');
+  defaultText.textContent = 'Create your own photo album! Add images using the inputs above';
+  console.log(defaultText);
+  defaultText.className ='default-text';
+  cardContainer.appendChild(defaultText);
+}
+
+function removeDefault() {
+  var defaultText = document.querySelector('.default-text')
+
+  if (!!defaultText) {
+    defaultText.remove();
+  }
+}
+
+
 function addListeners() {
   var deleteButtons = document.querySelectorAll('.delete');
   var favoriteButtons = document.querySelectorAll('.favorite');
@@ -22,6 +63,7 @@ function addListeners() {
 
   for (var i = 0; i < favoriteButtons.length; i++) {
     favoriteButtons[i].addEventListener('click', favoriteCard)
+    favoriteButtons[i].addEventListener('click', orderFavorites)
   }
 }
 
@@ -38,6 +80,7 @@ var photoFile = fileInput.files[0]
 
 function deleteCard() {
   this.closest('.card').remove();
+  defaultText()
 }
 
 function favoriteCard() {
@@ -98,6 +141,7 @@ function addCard() {
 
   //Add Listeners
   addListeners()
+  defaultText()
 };
 
 // Get the modal
