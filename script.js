@@ -24,15 +24,15 @@ function addListeners() {
   }
 }
 
-titleInput.addEventListener('keypress', function () {
+titleInput.addEventListener('keypress', function() {
   saveButton.disabled = false;
 });
 
-captionInput.addEventListener('keypress', function () {
+captionInput.addEventListener('keypress', function() {
   saveButton.disabled = false;
 });
 
-titleInput.addEventListener('keyup', function () {
+titleInput.addEventListener('keyup', function() {
   if (titleInput.value === '') {
     saveButton.disabled = true;
   } else {
@@ -40,12 +40,12 @@ titleInput.addEventListener('keyup', function () {
   };
 });
 
-captionInput.addEventListener('keyup', function () {
+captionInput.addEventListener('keyup', function() {
   if (titleInput.value === '') {
     saveButton.disabled = true;
   } else {
     saveButton.disabled = false;
-  };a
+  };
 });
 
 function deleteCard() {
@@ -53,7 +53,7 @@ function deleteCard() {
 }
 
 function favoriteCard() {
-  if (this.getAttribute('src') == 'assets/favorite-active.svg'){
+  if (this.getAttribute('src') == 'assets/favorite-active.svg') {
     this.setAttribute('src', 'assets/favorite.svg')
   } else {
     this.setAttribute('src', 'assets/favorite-active.svg');
@@ -116,9 +116,9 @@ var modal = document.getElementById('myModal');
 // Get the image and insert it inside the modal
 var img = document.querySelector('.card-photo');
 var modalImg = document.getElementById("img01");
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
+img.onclick = function() {
+  modal.style.display = "block";
+  modalImg.src = this.src;
 }
 
 // Get the <span> element that closes the modal
@@ -126,5 +126,5 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-    modal.style.display = "none";
+  modal.style.display = "none";
 }

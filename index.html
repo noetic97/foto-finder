@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Foto Finder</title>
-  </head>
-  <body>
-    <header>
-      <h1 class="document-title">FOTO<img src="assets/foto-finder-logo.svg" alt="foto finder logo" class="logo">FINDER</h1>
 
-      <div class="text-inputs">
-        <label for="foto-title" class="text-label">Title</label>
-        <input type="text" class="text-field" id="foto-title" name="foto-title">
+<head>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Foto Finder</title>
+</head>
 
-        <label for="foto-title" class="text-label">Caption</label>
-        <input type="text" class="text-field" id="foto-caption" name="foto-caption">
+<body>
+  <header>
+    <h1 class="document-title">FOTO<img src="assets/foto-finder-logo.svg" alt="foto finder logo" class="logo">FINDER</h1>
 
-        <label for="file" class="header-button">Choose File</label>
-        <input type="file" name="file" id="file" accept="image/*">
-        <button type="button" name="save" id="save" class="header-button" disabled>Add to Album</button>
-      </div>
+    <div class="text-inputs">
+      <label for="foto-title" class="text-label">Title</label>
+      <input type="text" class="text-field" id="foto-title" name="foto-title">
 
-    </header>
+      <label for="foto-title" class="text-label">Caption</label>
+      <input type="text" class="text-field" id="foto-caption" name="foto-caption">
 
-    <main>
-      <section class="card">
-        <h3 class="card-title">Placeholder text</h3>
-        <img src="photos/waterfall-2.jpg" alt="" class="card-photo">
-        <h4 class="card-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-        <div class="trash-like">
-          <img src="assets/delete.svg" alt="delete icon" class="icon delete">
-          <img src="assets/favorite.svg" alt="favorite icon" class="icon favorite">
-        </div>
-      </section>
-    </main>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
+      <label for="file" class="header-button">Choose File</label>
+      <input type="file" name="file" id="file" accept="image/*">
+      <button type="button" name="save" id="save" class="header-button" disabled>Add to Album</button>
     </div>
-    <script src="script.js"></script>
-  </body>
+
+  </header>
+
+  <main>
+    <section class="card">
+      <h3 class="card-title">Placeholder text</h3>
+      <img src="photos/waterfall-2.jpg" alt="" class="card-photo">
+      <h4 class="card-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+      <div class="trash-like">
+        <img src="assets/delete.svg" alt="delete icon" class="icon delete">
+        <img src="assets/favorite.svg" alt="favorite icon" class="icon favorite">
+      </div>
+    </section>
+  </main>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
