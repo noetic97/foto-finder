@@ -21,8 +21,8 @@
         <input type="text" class="text-field" id="foto-caption" name="foto-caption">
 
         <label for="file" class="header-button">Choose File</label>
-        <input type="file" name="file" id="file">
-        <button type="button" name="save" id="save" class="header-button">Save</button>
+        <input type="file" name="file" id="file" accept="image/*">
+        <button type="button" name="save" id="save" class="header-button" disabled>Add to Album</button>
       </div>
 
     </header>
@@ -38,6 +38,12 @@
         </div>
       </section>
     </main>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
