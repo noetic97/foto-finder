@@ -54,9 +54,12 @@ function deleteCard() {
 
 function favoriteCard() {
   if (this.getAttribute('src') == 'assets/favorite-active.svg') {
-    this.setAttribute('src', 'assets/favorite.svg')
+    this.setAttribute('src', 'assets/favorite.svg');
+    this.closest('.card').style.backgroundColor = 'white';
+
   } else {
     this.setAttribute('src', 'assets/favorite-active.svg');
+    this.closest('.card').style.backgroundColor = '#DB5645';
   }
 }
 

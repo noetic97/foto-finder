@@ -160,7 +160,13 @@ main:after {
   float: right;
 }
 /*Psuedo Classes*/
-.header-buttonhover {
+
+.icon:hover,
+.header-button:hover {
+  cursor: pointer;
+}
+
+.header-button:hover {
   background: #938284;
 }
 
