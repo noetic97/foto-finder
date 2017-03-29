@@ -12,12 +12,28 @@ body {
 
 header {
   background: #3e2a35;
-  color: #ffffff;
+  color: #fff;
 }
 
 h3,
 h4 {
   color: #3E2A35;
+}
+
+.default-text {
+  font-size: 50px;
+  font-weight: 800;
+  padding: 20px;
+  margin-top: 35px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.default-text:hover {
+  transition: 0.9s;
+  color: #fff;
+
+
 }
 
 .document-title {
@@ -93,9 +109,10 @@ h4 {
 
 main {
   padding: 10px;
-  text-align: center;
+  /*text-align: center;*/
   vertical-align: top;
   margin: 0 auto;
+  width: 90%;
 }
 
 main:after {
@@ -115,7 +132,7 @@ main:after {
   background: #fff;
   border: 1px solid #938284;
   box-shadow: 1px 1px 5px #938284;
-  float: left;
+  /*float: left;*/
 }
 
 .card-photo {
@@ -258,7 +275,57 @@ main:after {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+@media screen and (min-width: 400px) {
+  main {
+    width: 400px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  main {
+    width: 550px;
+    margin: auto;
+    padding-left: 70px;
+  }
+}
+
+
+
+@media screen and (min-width: 700px) {
+  main {
+    width: 700px;
+    margin: auto;
+    padding-left: 50px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  main {
+    width: 850px;
+    margin: auto;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    width: 1000px;
+    margin: auto;
+    padding-left: 90px;
+  }
+}
+
 @media screen and (max-width: 550px) {
+
+  /*main {
+    width: 400px;
+    margin: auto;
+    padding-left: 48px;
+  }*/
+
   .text-inputs {
     width: 75%;
   }
@@ -293,12 +360,5 @@ main:after {
     height: 50px;
     width: 10%;
     margin-right: 5px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  main {
-    width: 1000px;
-    margin: auto;
-    padding-left: 90px;
   }
 }
