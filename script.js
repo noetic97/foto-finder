@@ -103,7 +103,7 @@ function favoriteCard() {
   } else {
     this.id = 'favorited';
     this.setAttribute('src', 'assets/favorite-active.svg');
-    this.closest('.card').style.backgroundColor = '#DB5645';
+    this.closest('.card').style.backgroundColor = '#E26D5A';
   }
 }
 

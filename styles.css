@@ -188,7 +188,7 @@ main:after {
 }
 
 .header-button[disabled] {
-  background: red;
+  background: #E26D5A;
   cursor: not-allowed;
 }
 /* The Modal (background) */
