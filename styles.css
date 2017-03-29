@@ -27,11 +27,11 @@ h4 {
   margin: 35px auto;
   text-align: center;
   line-height: 1.5;
-  transition: 0.9s;
+  transition: 0.5s;
 }
 
 .default-text:hover {
-  transition: 0.9s;
+  transition: 0.5s;
   color: #fff;
 }
 
@@ -91,6 +91,7 @@ h4 {
   vertical-align: middle;
   outline-color: #E26D5A;
   outline-width: 1px;
+  transition: 0.5s;
 }
 
 #file {
@@ -185,6 +186,7 @@ main:after {
 
 .header-button:hover {
   background: #938284;
+  transition: 0.5s;
 }
 
 .header-button[disabled] {
