@@ -7,6 +7,7 @@ var favoriteArr = []
 
 // Event Listeners
 addListeners()
+defaultText()
 saveButton.addEventListener('click', addCard)
 titleInput.addEventListener('input', buttonToggle)
 captionInput.addEventListener('input', buttonToggle)
@@ -27,29 +28,31 @@ function orderFavorites () {
   console.log(favoriteArr)
 }
 
+
+
+// Manage default text
 function defaultText() {
-  if (document.getElementsByClassName('card').length > 1) {
-    console.log('card exists')
-    removeDefault()
-  } else {
+  var currentDefaultText = document.getElementsByClassName('default-text')
+  var cardCount = document.getElementsByClassName('card').length
+
+  if (cardCount < 1 && currentDefaultText.length < 1) {
     createDefault()
+  } else {
+    removeDefault(currentDefaultText)
   }
 }
 
 function createDefault() {
-  var defaultText = document.createElement('h3');
-  defaultText.textContent = 'Create your own photo album! Add images using the inputs above';
-  console.log(defaultText);
-  defaultText.className ='default-text';
-  cardContainer.appendChild(defaultText);
+  var newDefaultText = document.createElement('h3');
+  newDefaultText.textContent = 'Create your own photo album! Add images using the inputs above';
+  newDefaultText.className ='default-text';
+  cardContainer.appendChild(newDefaultText);
 }
 
-function removeDefault() {
-  var defaultText = document.querySelector('.default-text')
-
-  if (!!defaultText) {
-    defaultText.remove();
-  }
+function removeDefault(currentDefaultText) {
+  for (var i = 0; i < currentDefaultText.length; i++){
+  currentDefaultText[i].remove();
+  };
 }
 
 
@@ -150,10 +153,10 @@ var modal = document.getElementById('myModal');
 // Get the image and insert it inside the modal
 var img = document.querySelector('.card-photo');
 var modalImg = document.getElementById("img01");
-img.onclick = function() {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-}
+//   img.onclick = function() {
+//   modal.style.display = "block";
+//   modalImg.src = this.src;
+// }
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
