@@ -3,22 +3,24 @@ var captionInput = document.getElementById('foto-caption');
 var fileInput = document.getElementById('file');
 var saveButton = document.getElementById('save');
 var cardContainer = document.querySelector('main');
+var modal = document.getElementById('myModal');
+
 
 // Event Listeners
-addListeners()
-defaultText()
-saveButton.addEventListener('click', addCard)
-titleInput.addEventListener('input', buttonToggle)
-captionInput.addEventListener('input', buttonToggle)
-fileInput.addEventListener('change', buttonToggle)
+addListeners();
+defaultText();
+addCloseListener();
+saveButton.addEventListener('click', addCard);
+titleInput.addEventListener('input', buttonToggle);
+captionInput.addEventListener('input', buttonToggle);
+fileInput.addEventListener('change', buttonToggle);
 
 
-// Global Functions
+
 function orderFavorites () {
   var favoriteButtons = document.querySelectorAll('.favorite');
   var favoriteArr = [];
 
-  // Get a list of the cards
   for (var i = 0; i < favoriteButtons.length; i++) {
     favoriteArr.push(favoriteButtons[i]);
   };
@@ -36,7 +38,6 @@ function orderFavorites () {
     cardContainer.insertBefore(cardLoop, favoriteArr[favoriteArr.length - 1].closest('.card'))
   };
 };
-
 
 
 // Manage default text
@@ -143,7 +144,6 @@ function addCard() {
   favoriteIcon.className = 'icon favorite';
 
 
-
   //need to clean up this section
   cardStructure.appendChild(title);
   cardStructure.appendChild(photo);
@@ -155,25 +155,30 @@ function addCard() {
 
 
   //Add Listeners
-  addListeners()
-  defaultText()
+  addListeners();
+  defaultText();
+  modalDisplay();
 };
 
-// Get the modal
-var modal = document.getElementById('myModal');
 
-// Get the image and insert it inside the modal
-var img = document.querySelector('.card-photo');
-var modalImg = document.getElementById("img01");
-//   img.onclick = function() {
-//   modal.style.display = "block";
-//   modalImg.src = this.src;
-// }
+// Modal Functions
+function addCloseListener() {
+  var span = document.querySelector('.close');
+  span.addEventListener('click', closeModal);
+}
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+function closeModal() {
+  modal.style.display = 'none';
+}
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+function modalDisplay() {
+  var images = document.querySelectorAll('.card-photo');
+  var modalImg = document.getElementById('img01');
+
+  for (var i = 0; i < images.length; i++ ) {
+    images[i].onclick = function() {
+    modal.style.display = 'block';
+    modalImg.src = this.src;
+    }
+  }
 }
