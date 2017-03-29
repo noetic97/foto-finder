@@ -24,16 +24,15 @@ h4 {
   font-size: 50px;
   font-weight: 800;
   padding: 20px;
-  margin-top: 35px;
+  margin: 35px auto;
   text-align: center;
   line-height: 1.5;
+  transition: 0.9s;
 }
 
 .default-text:hover {
   transition: 0.9s;
   color: #fff;
-
-
 }
 
 .document-title {
@@ -149,7 +148,7 @@ main:after {
 
 .card-caption {
   height: 100px;
-  overflow-y: auto;
+  overflow-wrap: break-word;
   padding: 7px;
   font-size: 12px;
 }
@@ -292,8 +291,6 @@ main:after {
   }
 }
 
-
-
 @media screen and (min-width: 700px) {
   main {
     width: 700px;
@@ -315,6 +312,13 @@ main:after {
     width: 1000px;
     margin: auto;
     padding-left: 90px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .default-text {
+    font-size: 40px;
   }
 }
 
@@ -344,6 +348,14 @@ main:after {
     height: 60px;
     width: 10%;
     margin-right: 5px;
+  }
+
+  .header-button {
+    font-size: 12px;
+  }
+
+  .default-text {
+    font-size: 30px;
   }
 
   .modal-content {
