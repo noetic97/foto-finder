@@ -4,13 +4,14 @@ var fileInput = document.getElementById('file');
 var saveButton = document.getElementById('save');
 var cardContainer = document.querySelector('main');
 
-//Event Listeners
+// Event Listeners
 addListeners()
+saveButton.addEventListener('click', addCard)
+titleInput.addEventListener('input', buttonToggle)
+captionInput.addEventListener('input', buttonToggle)
+fileInput.addEventListener('change', buttonToggle)
 
-saveButton.addEventListener('click', function() {
-  addCard();
-})
-
+// Global Functions
 function addListeners() {
   var deleteButtons = document.querySelectorAll('.delete');
   var favoriteButtons = document.querySelectorAll('.favorite');
@@ -24,39 +25,25 @@ function addListeners() {
   }
 }
 
-titleInput.addEventListener('keypress', function() {
-  saveButton.disabled = false;
-});
-
-captionInput.addEventListener('keypress', function() {
-  saveButton.disabled = false;
-});
-
-titleInput.addEventListener('keyup', function() {
-  if (titleInput.value === '') {
+function buttonToggle () {
+var photoFile = fileInput.files[0]
+  if (titleInput.value === '' || captionInput.value === '') {
+    saveButton.disabled = true;
+  } else if (photoFile == undefined || photoFile.type !== 'image/jpeg'){
     saveButton.disabled = true;
   } else {
     saveButton.disabled = false;
-  };
-});
-
-captionInput.addEventListener('keyup', function() {
-  if (titleInput.value === '') {
-    saveButton.disabled = true;
-  } else {
-    saveButton.disabled = false;
-  };
-});
+  }
+}
 
 function deleteCard() {
-  this.closest('.card').remove()
+  this.closest('.card').remove();
 }
 
 function favoriteCard() {
   if (this.getAttribute('src') == 'assets/favorite-active.svg') {
     this.setAttribute('src', 'assets/favorite.svg');
     this.closest('.card').style.backgroundColor = 'white';
-
   } else {
     this.setAttribute('src', 'assets/favorite-active.svg');
     this.closest('.card').style.backgroundColor = '#DB5645';
