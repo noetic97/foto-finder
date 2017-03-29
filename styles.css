@@ -68,6 +68,7 @@ h3, h4 {
   vertical-align: middle;
 }
 
+
 #file {
 	width: 0.1px;
 	height: 0.1px;
@@ -82,12 +83,15 @@ h3, h4 {
   right: 0;
 }
 
+
 main {
   background: #C2B2B4;
   padding: 10px;
   text-align: center;
   vertical-align: top
 }
+
+
 
 .card {
   text-align: left;
@@ -140,23 +144,4 @@ main {
 /*Psuedo Classes*/
 .header-button:hover {
   background: #938284
-}
-
-@media screen and (max-width: 600px) {
-  main {
-    background-color: red;
-  }
-  .text-inputs {
-    width: 75%;
-  }
-
-  .card {
-    height: 275px;
-    width: 200px;
-  }
-
-  h1 {
-    font-size: 50%
-  }
-
 }
