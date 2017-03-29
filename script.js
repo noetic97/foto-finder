@@ -3,7 +3,6 @@ var captionInput = document.getElementById('foto-caption');
 var fileInput = document.getElementById('file');
 var saveButton = document.getElementById('save');
 var cardContainer = document.querySelector('main');
-var favoriteArr = []
 
 // Event Listeners
 addListeners()
@@ -16,17 +15,27 @@ fileInput.addEventListener('change', buttonToggle)
 
 // Global Functions
 function orderFavorites () {
-  var favoriteButtons = document.querySelectorAll('.favorite')
-  var favoriteArr = []
+  var favoriteButtons = document.querySelectorAll('.favorite');
+  var favoriteArr = [];
 
   // Get a list of the cards
   for (var i = 0; i < favoriteButtons.length; i++) {
-    favoriteArr.push(favoriteButtons[i].closest('.card'))
-  }
+    favoriteArr.push(favoriteButtons[i]);
+  };
 
-  // Unshift current element to the top of the list
-  console.log(favoriteArr)
-}
+  favoriteArr = favoriteArr.sort(function(a , b) {
+    if (a.id == 'favorited') {
+      return -1;
+    } else {
+      return 1;
+    };
+  });
+
+  for (var i = 0; i < favoriteArr.length; i++) {
+    var cardLoop = favoriteArr[i].closest('.card')
+    cardContainer.insertBefore(cardLoop, favoriteArr[favoriteArr.length - 1].closest('.card'))
+  };
+};
 
 
 
@@ -88,9 +97,11 @@ function deleteCard() {
 
 function favoriteCard() {
   if (this.getAttribute('src') == 'assets/favorite-active.svg') {
+    this.removeAttribute('id')
     this.setAttribute('src', 'assets/favorite.svg');
     this.closest('.card').style.backgroundColor = 'white';
   } else {
+    this.id = 'favorited';
     this.setAttribute('src', 'assets/favorite-active.svg');
     this.closest('.card').style.backgroundColor = '#DB5645';
   }
@@ -130,6 +141,7 @@ function addCard() {
   buttonArea.className = 'trash-like';
   deleteIcon.className = 'icon delete';
   favoriteIcon.className = 'icon favorite';
+
 
 
   //need to clean up this section
